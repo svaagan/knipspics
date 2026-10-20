@@ -1,0 +1,115 @@
+@font-face { font-family: "Shrikhand"; src: url("/fonts/Shrikhand-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Bricolage"; font-weight: 400; src: url("/fonts/BricolageGrotesque-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Bricolage"; font-weight: 700; src: url("/fonts/BricolageGrotesque-Bold.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Bricolage"; font-weight: 800; src: url("/fonts/BricolageGrotesque-ExtraBold.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Space Mono"; font-weight: 700; src: url("/fonts/SpaceMono-Bold.woff2") format("woff2"); font-display: swap; }
+
+:root {
+  --paper: #F1E4C8;
+  --paper-light: #FAF3E3;
+  --paper-border: #D9C5A0;
+  --ink: #2A1D14;
+  --ink-muted: #6B5A44;
+  --night: #14110E;
+  --night-text: #CDBF9F;
+  --rust: #C2491D;
+  --rust-text: #A63A12;
+  --mustard: #E3A82B;
+  --teal: #2C6E6A;
+  --brown: #5A3A22;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 17px/1.5 "Bricolage", -apple-system, system-ui, sans-serif;
+}
+
+.stripes { display: grid; gap: 2px; }
+.stripes span { display: block; height: 6px; }
+.stripes span:nth-child(1) { background: var(--rust); }
+.stripes span:nth-child(2) { background: var(--mustard); }
+.stripes span:nth-child(3) { background: var(--teal); }
+.stripes span:nth-child(4) { background: var(--brown); }
+
+main { max-width: 640px; margin: 0 auto; padding: 32px 16px 48px; }
+
+.logo {
+  display: inline-block;
+  font: 400 40px/1.1 "Shrikhand", serif;
+  color: var(--paper);
+  background: var(--rust);
+  padding: 6px 18px 10px;
+  border-radius: 12px;
+  transform: rotate(-4deg);
+  box-shadow: 4px 4px 0 var(--ink);
+  text-shadow: 2px 2px 0 var(--ink);
+  text-decoration: none;
+}
+.logo.small { font-size: 26px; padding: 3px 12px 6px; border-radius: 10px; box-shadow: 3px 3px 0 var(--ink); }
+
+h1 { font-weight: 800; font-size: 34px; line-height: 1.1; letter-spacing: -0.02em; margin: 32px 0 12px; }
+h2 { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; margin: 32px 0 8px; }
+p, li { color: var(--ink); }
+.muted { color: var(--ink-muted); }
+a { color: var(--rust-text); font-weight: 700; }
+
+.label {
+  font: 700 11px/1 "Space Mono", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.card {
+  background: var(--night);
+  color: var(--paper);
+  border-radius: 24px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 5px 5px 0 var(--rust);
+}
+.card .label { color: var(--night-text); }
+.code {
+  font: 700 clamp(40px, 13vw, 64px)/1.1 "Space Mono", monospace;
+  color: var(--mustard);
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: var(--rust);
+  color: var(--paper);
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  font: 800 18px/1 "Bricolage", sans-serif;
+  text-decoration: none;
+  margin: 24px 0 8px;
+}
+.button:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+
+.soon {
+  border: 3px dashed var(--ink-muted);
+  border-radius: 20px;
+  padding: 16px 20px;
+  margin: 24px 0 8px;
+  color: var(--ink-muted);
+  font-weight: 700;
+}
+
+ol.steps { padding-left: 24px; }
+ol.steps li { margin: 6px 0; }
+
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--paper-border); font-size: 15px; }
+footer a { margin-right: 16px; }

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personvern – Knips</title>
+<meta name="description" content="Hvilke data Knips lagrer, hvor de lagres, hvor lenge, og hva «anonym» betyr.">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="stripes" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+<main>
+  <a class="logo small" href="/">Knips</a>
+  <h1>Personvern</h1>
+  <p class="muted">Sist endret 20. oktober 2026</p>
+
+  <p>Knips er en app som gjør gjestenes telefoner til engangskameraer for ett event, for eksempel et bryllup. Her står
+    hvilke opplysninger appen lagrer, hvor de lagres, hvor lenge, og hvem som kan se dem.</p>
+  <p>Behandlingsansvarlig er Knips ved Stian Gaare Vaagan. Spørsmål sendes til
+    <a href="mailto:kontakt@knipspics.no">kontakt@knipspics.no</a>.</p>
+
+  <h2>Kort fortalt</h2>
+  <ul>
+    <li>Gjester trenger ingen konto, e-post eller telefonnummer.</li>
+    <li>Ingen ser bildene før de fremkalles – heller ikke brudeparet eller den som laget eventet.</li>
+    <li>Som standard er du anonym: brudeparet ser bildene dine, men ikke hvem som tok dem.</li>
+    <li>Bildene og navnene slettes fra serveren 90 dager etter fremkallingen.</li>
+    <li>Knips har ingen reklame, sporing eller analyseverktøy, og selger ingen opplysninger.</li>
+  </ul>
+
+  <h2>Hva som lagres om gjester</h2>
+  <ul>
+    <li><strong>En anonym bruker-ID.</strong> Appen lager den selv første gang du blir med i et event. Den er ikke knyttet
+      til navnet ditt, e-postadressen din eller telefonnummeret ditt.</li>
+    <li><strong>Hvilket event du er med i</strong>, og når du ble med.</li>
+    <li><strong>Bildene du tar</strong>, i to størrelser, med tidspunktet bildet ble tatt og lastet opp. Før bildet lagres,
+      fjerner appen alle opplysningene kameraet skriver inn i fila, også stedet bildet ble tatt.</li>
+    <li><strong>Navnet ditt</strong>, bare hvis du selv velger å vise det på bildene.</li>
+  </ul>
+
+  <h2>Hva som lagres om den som lager eventet</h2>
+  <ul>
+    <li><strong>Innlogging med Apple.</strong> Knips får bare Apples ID-nummer for deg i denne appen, ikke navnet eller
+      e-postadressen din.</li>
+    <li><strong>Eventet:</strong> navn, dato, klokkeslett, sted (hvis du fyller det ut), tidssone og innstillingene for
+      antall bilder og fremkalling.</li>
+    <li>Den som lager eventet, er også gjest i det, og har de samme opplysningene som gjestene over.</li>
+  </ul>
+
+  <h2>Hva «anonym» betyr</h2>
+  <p>Velger du å være anonym, får brudeparet aldri vite hvem som tok bildene dine. Det gjelder ikke bare i appen:
+    serveren gir dem verken navnet ditt, bruker-ID-en din eller noe annet som kan skille bildene dine fra de andre
+    anonyme bildene. Knips-serveren vet fortsatt hvilken anonym bruker som lastet opp hvilket bilde, for å kunne
+    håndheve antall bilder og låse bildene til de fremkalles.</p>
+  <p>Velger du å vise navnet, står det på bildene dine i brudeparets galleri. Du kan bytte tilbake til anonym helt fram
+    til det første av bildene dine er fremkalt.</p>
+
+  <h2>Hvor opplysningene lagres</h2>
+  <p>Opplysningene lagres hos Supabase, i et datasenter i Stockholm (EU). Supabase behandler dem bare på vegne av Knips.
+    Serveren fører en teknisk logg over forespørsler, med IP-adresse, som slettes etter noen dager.</p>
+  <p>På telefonen ligger bildene i appens egen mappe. De kommer ikke i Bilder-appen før du selv trykker «Lagre i
+    Bilder» etter fremkallingen, og de tas ikke med i iCloud-sikkerhetskopien. Sletter du appen, slettes de.</p>
+
+  <h2>Hvor lenge</h2>
+  <ul>
+    <li>Bildene og navnene slettes fra serveren 90 dager etter at bildene ble fremkalt. Bilder du allerede har på
+      telefonen, blir liggende der.</li>
+    <li>Eventets navn, dato og sted blir liggende til den som laget eventet, sletter det.</li>
+    <li>«Slett eventet og kontoen» i appen sletter med en gang alle bilder, gjester og opplysninger om eventet, og
+      kontoen til den som laget det. Samtidig fjernes koblingen til Apple-ID-en.</li>
+  </ul>
+
+  <h2>Tillatelser på telefonen</h2>
+  <ul>
+    <li><strong>Kamera</strong> – for å ta bilder og skanne QR-koden. Bare bakkameraet brukes.</li>
+    <li><strong>Bilder</strong> – bare når du selv lagrer et fremkalt bilde.</li>
+    <li><strong>Varsler</strong> – et varsel fra telefonen selv når bildene er fremkalt. Knips sender ingen varsler fra
+      serveren.</li>
+  </ul>
+
+  <h2>Rettighetene dine</h2>
+  <p>Du kan be om innsyn i, retting av eller sletting av opplysninger om deg. Skriv til
+    <a href="mailto:kontakt@knipspics.no">kontakt@knipspics.no</a>. Er du anonym gjest, trenger vi eventkoden og omtrent
+    når bildene ble tatt for å finne dem. Mener du at opplysningene dine behandles i strid med reglene, kan du klage til
+    <a href="https://www.datatilsynet.no">Datatilsynet</a>.</p>
+
+  <footer>
+    <a href="/">Forsiden</a>
+    <a href="/support/">Hjelp</a>
+  </footer>
+</main>
+</body>
+</html>

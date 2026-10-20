@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["L524TT7P94.no.svaagan.knips"],
+        "components": [
+          { "/": "/e/*", "comment": "QR links: https://knipspics.no/e/<code>" }
+        ]
+      }
+    ]
+  }
+}

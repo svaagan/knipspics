@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knips</title>
+<meta name="description" content="Knips gjør telefonen til et engangskamera for bryllupet eller festen.">
+<link rel="icon" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="stylesheet" href="/style.css">
+<script src="/site.js"></script>
+</head>
+<body>
+<div class="stripes" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+<main>
+  <a class="logo small" href="/">Knips</a>
+
+  <!-- QR links (/e/<code>) land here: GitHub Pages has no rewrites, so the 404 page reads the path. -->
+  <section id="invite" hidden>
+    <h1>Du er invitert til et Knips-event</h1>
+    <p>Knips gjør telefonen din til et engangskamera. Alle bildene fremkalles samtidig, etter festen.</p>
+    <div class="card">
+      <div class="label">Koden din</div>
+      <div class="code" id="code"></div>
+    </div>
+    <p><strong>Last ned Knips, og skriv inn koden.</strong></p>
+    <div data-download></div>
+    <ol class="steps muted">
+      <li>Last ned Knips.</li>
+      <li>Åpne appen og trykk «Skriv inn kode».</li>
+      <li>Skriv inn koden over, og hent kameraet.</li>
+    </ol>
+  </section>
+
+  <section id="missing" hidden>
+    <h1>Fant ikke siden</h1>
+    <p>Lenken er kanskje skrevet feil. Har du fått en kode, kan du skrive den inn i Knips-appen.</p>
+    <p><a href="/">Til forsiden</a></p>
+  </section>
+
+  <footer>
+    <a href="/personvern/">Personvern</a>
+    <a href="/support/">Hjelp</a>
+  </footer>
+</main>
+<script>
+  const code = eventCode(location.pathname);
+  if (code) {
+    document.getElementById("code").textContent = code.slice(0, 3) + "-" + code.slice(3);
+    document.getElementById("invite").hidden = false;
+    document.title = "Du er invitert – Knips";
+  } else {
+    document.getElementById("missing").hidden = false;
+  }
+  showDownload();
+</script>
+</body>
+</html>
